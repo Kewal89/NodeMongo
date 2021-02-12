@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MongoNodeExpressEJS Hospital Details</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    
+    <section data-position="hospitals">
+      <h2>Hospitals</h2>
+
+      <ul class="hospitals">
+        <% for(var i = 0; i < hospitalList.length; i++) {%>
+        <li class="hospital">
+          <span><%= hospitalList[i].name %></span>:
+          <span><%= hospitalList[i].lat %></span>,
+          <span><%= hospitalList[i].long %></span>
+        </li>
+        <% } %>
+
+        <% if(nearest !== null){ %>
+          <p style="text-align: center;"><%= nearest %></p>
+        <% } %>
+
+      </ul>
+    </section>
+  </body>
+</html>
