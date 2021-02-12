@@ -91,15 +91,3 @@ MongoClient.connect(uri, { useUnifiedTopology: true })
     
   })
   .catch(error => console.error("Mongo Error : ", error))
-
-
-
-
-
-
-
-
-
-
-
-
